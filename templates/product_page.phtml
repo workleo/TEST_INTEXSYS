@@ -1,0 +1,35 @@
+<?php
+$repository = new Core();
+?>
+<html>
+<head>
+    <title>Product - <?php echo $response['title'] ?></title>
+</head>
+<body>
+<h1><?php echo $response['title'] ?></h1>
+<div>
+    <div style="margin: 20px; float: left;">
+        <div>
+            <img style="max-width: 500px"
+                 src="<?php echo sprintf('https://op1.ec.tc/%s/%s', 'full-size', $product['image']) ?>">
+        </div>
+        <div style="float: left;clear: both;">
+            <h4><a href="<?php echo $product['url'] ?>"><?php echo $product['name'] ?></a></h4>
+            <!-- make whole product element clickable -->
+            <p><?php echo $product['description'] ?></p>
+            <span style="font-size: 24px; color: #f00">$<?php echo $product['price'] ?></span>
+        </div>
+        <div style="margin-top: 20px">
+            <h2>COUNT OF PRODUCT REVIEWS IS NEEDED HERE</h2>
+            <div class="review-list">
+                <div>LIST OF PRODUCT REVIEWS IS NEEDED HERE</div>
+            </div>
+        </div>
+        <div id="write-review" style="padding: 20px 0; clear:both;">
+            <div>ADD A NEW PRODUCT REVIEW</div>
+        </div>
+        <div style="padding: 20px 0"><a href="/">Back to list</a></div>
+    </div>
+</div>
+</body>
+</html>
